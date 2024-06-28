@@ -1,0 +1,4 @@
+Task4:
+
+Write a Java program that reads an integer and prints whether it is a prime number using a for loop and if statements.
+

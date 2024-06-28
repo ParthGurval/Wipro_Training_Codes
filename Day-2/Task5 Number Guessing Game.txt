@@ -1,0 +1,81 @@
+Task: 5
+
+Use Case 5: Number Guessing Game
+------------------------------------------
+Requirements:
+The program generates a random number between 1 and 100.
+The user has a limited number of attempts to guess the number (e.g., 10 attempts).
+The program provides feedback if the guessed number is too high, too low, or correct.
+The user can choose to play again after each game.
+Implement the game logic using for, while, and do-while loops and conditional constructs like if and switch.
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+// Code for Number Guessing Game
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumbersGame {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        Random rdm = new Random();
+        
+        boolean playAgain;
+        
+        do {
+            int randomNum = rdm.nextInt(100) + 1;
+            int totalAttempts = 10;
+            
+            System.out.println(
+                "Welcome to the Number Guessing Game! \n" +
+                "Please guess a number between 1 to 100. You have " + totalAttempts + " attempts left."
+            );
+            
+            for(int attempt = 1; attempt <= totalAttempts; attempt++) {
+                System.out.print("\nAttempt Number: " + attempt + "\nPlease enter your guess: ");
+                
+                if(sc.hasNextInt()) {
+                    int userGuess = sc.nextInt();
+                    
+                    if(userGuess < 1 || userGuess > 100) {
+                        System.out.println("Invalid guess! Please guess a number between 1 to 100.");
+                        totalAttempts--; 
+                    } else if(userGuess < randomNum) {
+                        System.out.println("Your guess is too low!");
+                    } else if(userGuess > randomNum) {
+                        System.out.println("Your guess is too high!");
+                    } else {
+                        System.out.println("Congratulations! You have guessed the correct number: " + randomNum);
+                        break;
+                    }
+                    
+                } else {
+                    System.out.println("Invalid input! Please enter a valid number.");
+                    sc.next(); 
+                    totalAttempts--; 
+                }
+                
+                System.out.println("Remaining attempts: " + (totalAttempts - attempt));
+                
+            }
+            
+            if(totalAttempts == 0) {
+                System.out.println("Sorry, you have run out of attempts. The correct number was: " + randomNum);
+            }
+            
+            System.out.println("Do you want to play again? Yes/No");
+            String resp = sc.next();
+            
+            playAgain = resp.equalsIgnoreCase("Yes");
+            
+        } while(playAgain);
+        
+        System.out.println("Thank you for playing the Number Guessing Game!");
+        sc.close();
+    }
+}

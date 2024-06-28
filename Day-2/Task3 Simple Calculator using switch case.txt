@@ -1,0 +1,73 @@
+Task 3:
+
+Use Case 5 : Simple Calculator using switch case
+ 
+Requirements:
+Prompt the user to enter two numbers.
+Prompt the user to choose an arithmetic operation (addition, subtraction, multiplication, division).
+Perform the chosen operation and display the result.
+Allow the user to perform another calculation or exit.
+
+
+Answer=>
+
+import java.util.Scanner;
+
+public class SimpCalc {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char choiceNum;
+
+        do {
+            System.out.println("Please Enter the First Number: ");
+            int num1 = sc.nextInt();
+
+            System.out.println("Please Enter the Second Number: ");
+            int num2 = sc.nextInt();
+
+            System.out.println("Please Select an operation: \n1. Addition (+) \n2. Subtraction (-) \n3. Multiplication (*) \n4. Division (/) ");
+            System.out.print("Please Enter Choice (number) from above operations (1/2/3/4): ");
+            int choice = sc.nextInt();
+
+            int result = 0;
+            String operator = "";
+
+            switch (choice) {
+                case 1:
+                    result = num1 + num2;
+                    operator = "+";
+                    break;
+                case 2:
+                    result = num1 - num2;
+                    operator = "-";
+                    break;
+                case 3:
+                    result = num1 * num2;
+                    operator = "*";
+                    break;
+                case 4:
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                        operator = "/";
+                    } else {
+                        System.out.println("Division by zero is infinity/ Not Valid");
+                    }
+                    break;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+
+            if (choice >= 1 && choice <= 4) {
+                System.out.println("Result: " + num1 + " " + operator + " " + num2 + " = " + result);
+            }
+
+            System.out.print("Do you want to continue calculation? \n If yes, press 1 | If no, press 2: ");
+            choiceNum = sc.next().charAt(0);
+
+        } while (choiceNum == '1');
+
+        System.out.println("Successfully Executed");
+        sc.close();
+    }
+}

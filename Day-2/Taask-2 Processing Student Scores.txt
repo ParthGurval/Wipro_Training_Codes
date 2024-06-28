@@ -1,0 +1,70 @@
+
+
+Task=>
+
+Use Case: Processing Student Scores
+Read a list of student scores.
+Calculate the average score.
+Determine if each student passed or failed based on a threshold (e.g., 60).
+Print the results for each student.
+
+Sample Output
+-----------
+Enter student score (negative number to end): 85
+Student 1: Score = 85, Result = Passed
+ 
+Enter student score (negative number to end): 42
+Student 2: Score = 42, Result = Failed
+--
+--
+--
+Enter student score (negative number to end): 65
+Student 10: Score = 65, Result = Passed
+ 
+Enter student score (negative number to end): -1
+Average Score: 69.2
+
+Req: 1. ip: Score, process: compare score, cal Avg, print Op condition on -ve score loop exit
+
+Solution=> 
+
+
+import java.util.Scanner;
+
+public class StudData {
+
+    public static void main(String[] args) {
+	
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter student score (negative number to end): ");
+        int score = sc.nextInt();
+        
+        int count = 0;
+        int finalScore = 0;
+        
+        while (score >= 0) {
+            count++;
+            finalScore += score;
+            
+            String result = score >= 60 ? "Passed" : "Failed";
+            System.out.println("Student " + count + ": Score = " + score + ", Result = " + result);
+            
+            
+            System.out.print("Enter student score (negative number to end): ");
+            score = sc.nextInt();
+        }
+        
+        sc.close();
+        
+       
+        if (count > 0) {
+            float averageScore = (float) finalScore / count;
+            System.out.println("Average Score: " + averageScore);
+        } else {
+            System.out.println("No scores entered.");
+        }
+    }
+}
+
+

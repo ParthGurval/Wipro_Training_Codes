@@ -1,0 +1,174 @@
+
+
+Tasks:
+1.Write a method that takes two strings, concatenates them, reverses the result.
+2.Write a method that takes a string, converts all characters to uppercase, and then returns the string with alternating uppercase and lowercase characters.
+3.Write a method that takes a string and a character, removes all occurrences of the character from the string, and returns the result.
+4.Write a method that takes a string, counts the number of vowels, and returns the count.
+
+
+
+
+// Task: 1
+
+	public static void main(String[] args) {
+		
+		String str1 = "Parth";
+		
+		String str2 = "WebDeveloper";
+		
+		System.out.println("First String is: "+str1);
+		System.out.println("Second String is: "+str2);
+		
+		String res1 = concatString(str1, str2);
+		System.out.println("\nConcatined String is: "+res1);
+		
+		String result = reverseString(res1);
+		System.out.println("\nReversed String is: "+result);
+		
+	}
+	
+	public static String concatString(String str1, String str2) {
+		
+		return str1 + str2;
+	}
+	
+	public static String reverseString(String str) {
+		
+		String reverseStr = "";
+		
+		for(int i = str.length() - 1; i >= 0 ; i--) {
+			
+			reverseStr = reverseStr + str.charAt(i);
+		}
+		
+		return reverseStr;
+		
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Task 2: 
+
+import java.util.*;
+
+public class javaStrings {
+    
+    public static void main(String[] args){
+        
+        String msg = "Hello World";
+        String res = alterString(msg);
+        System.out.println(res);
+    }
+    
+    public static String alterString(String str){
+        
+        String upperString = str.toUpperCase();
+        
+        String result = "";
+        
+        for(int i = 0; i < upperString.length(); i++){
+            
+            char currStrChar = upperString.charAt(i);
+            
+            if(Character.isLetter(currStrChar) || Character.isDigit(currStrChar)){
+                
+                if(i % 2 == 0){
+                    
+                    result = result + currStrChar;
+                }
+                else{
+                    result = result + Character.toLowerCase(currStrChar);
+                }
+            }
+            else{
+                    result = result + currStrChar;
+            }
+
+        }
+        
+        return result; 
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Task: 3
+
+import java.util.Scanner;
+
+public class javaStrings {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a String: ");
+        String userString = sc.nextLine();
+        
+        System.out.print("Enter a character to remove: ");
+        char rmCharacter =  sc.next().charAt(0);
+        
+        String result = removeCharString(userString, rmCharacter);
+        System.out.print("String after removing character is: "+result);
+    }
+    
+    public static String removeCharString(String str, char remChar){
+        
+        String storeStr = "";
+        
+        for(int i = 0; i < str.length(); i++){
+            
+            char currChar = str.charAt(i);
+            
+            if(currChar != remChar){
+                
+                storeStr = storeStr + currChar;
+            }
+        }
+        
+        return storeStr;
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Task: 4
+
+import java.util.Scanner;
+
+public class javaStrings {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Please Enter a String: ");
+        String inpStr = sc.nextLine();
+        
+        int countVowel = calcVowels(inpStr);
+        System.out.println("The Number of vowels in the String are: "+countVowel);
+    }
+    
+    public static int calcVowels(String str){
+        
+        str = str.toLowerCase();
+        
+        int count = 0;
+        
+        for(int i = 0; i < str.length(); i++){
+            
+            char vwChar = str.charAt(i);
+            
+            if(vwChar == 'a' || vwChar == 'e' || vwChar =='i' || vwChar == 'o' || vwChar == 'u'){
+                
+                count++;
+            }
+            
+        }
+        
+        return count;
+    }
+}

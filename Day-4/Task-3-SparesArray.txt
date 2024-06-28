@@ -1,0 +1,57 @@
+
+
+Use Case 7 : Sparse Arrays
+--------------------------
+ 
+There is a array of input string and a array of query strings. For each query string, determine how many times it occurs in the array of input strings.
+ 
+For example, given input string = {"ab", "ab", "abc"} and query string = {"ab", "abc", "bc"}, we find two instances of "ab" in input string, we find one instance of "abc" in input string and zero of "bc". Hence the return array is {2,1,0}.
+ 
+Sample Input:
+array of input string
+[aba, baba, aba, xzxb]
+ 
+array of query string
+[aba, xzxb, ab]
+ 
+Sample Output:
+2
+1
+0
+has context menu
+
+
+public class Sparse_Array {
+
+    public static void main(String[] args) {
+        String[] inputString = {"ab", "ab", "abc"};
+        String[] queryString = {"ab", "abc", "bc"};
+    
+        int[] result = totalQueries(inputString, queryString);
+        
+        for (int count : result) {
+            System.out.println(count);
+        }
+    }
+    
+    public static int[] totalQueries(String[] inputString, String[] queryString) {
+        int[] result = new int[queryString.length];  
+
+        
+        for (int i = 0; i < queryString.length; i++) {
+            String queRes = queryString[i];
+            int count = 0;
+            
+            
+            for (int j = 0; j < inputString.length; j++) {
+                if (queRes.equals(inputString[j])) {
+                    count++;
+                }
+            }
+            
+            result[i] = count;  
+        }
+        
+        return result; 
+    }
+}

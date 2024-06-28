@@ -1,0 +1,52 @@
+
+Task1: Single-D Array
+
+create an array to store marks of n students.
+Number of students need to be taken as input from the user
+marks of each student need to be taken as input from the user
+Display the marks of all studnets
+
+Output:
+Enter total number of students: 5
+Enter the marks of student-1: 99
+Enter the marks of student-2: 73
+Enter the marks of student-3: 86
+Enter the marks of student-4: 93
+Enter the marks of student-5: 85
+
+Recored marks of students are: 99, 73, 86, 93,85
+
+Answer =>
+
+import java.util.Scanner;
+
+public class StudMarks {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Please Enter Number Of Students: ");
+        int StudNum = sc.nextInt();
+        
+        int[] marks = new int[StudNum]; 
+        
+        for(int i=0; i< StudNum; i++){
+            
+            System.out.println("Please Enter Mark of Student-"+(i+1)+":");
+            marks[i]=sc.nextInt();
+        }
+        
+        System.out.println("Recorded Marks of Students are: ");
+        
+        for(int i=0; i<StudNum; i++){
+            
+            System.out.print(marks[i]);
+                if(i < StudNum-1){
+                    System.out.print(" ");
+                }
+        }
+        
+        sc.close();
+    }
+}

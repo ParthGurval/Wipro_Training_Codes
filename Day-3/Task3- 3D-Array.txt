@@ -1,0 +1,98 @@
+
+Task3: 3-D Array
+
+create a 3D array to store marks of 'n' students, present in 'n' classrooms located at 'n' schools.
+Number of students and classrooms need to be taken as input from the user
+marks of each student need to be taken as input from the user
+Display the marks of all studnets different classrooms wise
+
+Output:
+Enter total number of schools: 2
+Enter total number of classrooms: 2
+Enter total number of students: 3
+
+Enter the marks of student-1 from classroom-1 and school-1: 99
+Enter the marks of student-2 from classroom-1 and school-1: 73
+Enter the marks of student-3 from classroom-1 and school-1: 86
+
+Enter the marks of student-1 from classroom-2 and school-1: 93
+Enter the marks of student-2 from classroom-2 and school-1: 85
+Enter the marks of student-3 from classroom-2 and school-1: 81
+
+Enter the marks of student-1 from classroom-1 and school-2: 10
+Enter the marks of student-2 from classroom-1 and school-2: 20
+Enter the marks of student-3 from classroom-1 and school-2: 25
+
+Enter the marks of student-1 from classroom-2 and school-2: 15
+Enter the marks of student-2 from classroom-2 and school-2: 26
+Enter the marks of student-3 from classroom-2 and school-2: 12
+
+Recored marks of students From Classroom-1 and school-1 are: 99, 73, 86
+Recored marks of students From Classroom-2 and school-1 are: 93,85, 81
+
+Recored marks of students From Classroom-1 and school-2 are: 10, 20, 25
+Recored marks of students From Classroom-2 and school-3 are: 15, 26, 12
+
+
+Answer =>
+
+// code for 3D Array
+
+//copied code of 2D Array Below
+
+import java.util.Scanner;
+
+public class ThreeDimArray {
+    
+    public static void main(String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+        
+         //Inp for School count
+        System.out.print("Please Enter Number of School in the city: ");
+        int schoolNums = sc.nextInt();
+        
+        //Inp for classroom num
+        System.out.print("Please Enter Number of Classrooms in school: ");
+        int classNums = sc.nextInt();
+        
+         //Inp for Students num
+        System.out.print("Please Enter Number of Students in classroom: ");
+        int studNum = sc.nextInt();
+        
+        //2D array for storing schools & classrooms & students
+        int[][][] marks = new int[schoolNums][classNums][studNum];
+        
+        //inp for marks of students per classroom per school
+        for(int i=0; i < schoolNums; i++){
+            for(int j=0; j < classNums; j++){
+                for(int k=0; k < studNum; k++){
+                    
+                    System.out.print("Please Enter the marks of student-"+(k+1)+" from classroom-"+(j+1)+" and from School-"+(i+1)+":");
+                    marks[i][j][k] = sc.nextInt();
+                }
+                System.out.println();
+            }
+        }
+        
+        //opt of marks of students, resp classroom, from resp school wise
+        for(int i=0; i < schoolNums; i++){
+            for(int j=0; j < classNums; j++){
+                
+                System.out.print("Recorded Marks of students from classroom-"+(j+1)+" and from school-"+(i+1)+" are: ");
+                
+                for(int k=0; k < studNum; k++){
+                    
+                    System.out.print(marks[i][j][k]);
+                    if(k < studNum-1){
+                        System.out.print(" ");
+                    }
+                }
+                
+                System.out.println();
+            }
+        }
+        
+        sc.close();
+    }
+}

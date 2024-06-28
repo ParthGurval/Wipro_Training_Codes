@@ -1,0 +1,73 @@
+
+Task2: Single-D Array
+
+create a 2D array to store marks of n students, present in 'n' classrooms.
+Number of students and classrooms need to be taken as input from the user
+marks of each student need to be taken as input from the user
+Display the marks of all studnets different classrooms wise
+
+Output:
+Enter total number of classrooms: 2
+Enter total number of students: 3
+
+Enter the marks of student-1 from classroom-1: 99
+Enter the marks of student-2 from classroom-1: 73
+Enter the marks of student-3 from classroom-1: 86
+
+Enter the marks of student-1 from classroom-2: 93
+Enter the marks of student-2 from classroom-2: 85
+Enter the marks of student-3 from classroom-2: 81
+
+Recored marks of students From Classroom-1 are: 99, 73, 86
+Recored marks of students From Classroom-2 are: 93,85, 81
+
+
+Answer =>
+
+import java.util.Scanner;
+
+public class TwoDimArray {
+    
+    public static void main(String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+        
+        //Inp for classroom num
+        System.out.print("Please Enter Number of Classrooms: ");
+        int classNums = sc.nextInt();
+        
+         //Inp for Students num
+        System.out.print("Please Enter Number of Students: ");
+        int studNum = sc.nextInt();
+        
+        //2D array for storing classroom & students
+        int[][] marks = new int[classNums][studNum];
+        
+        //inp for marks of students per classroom
+        for(int i=0; i < classNums; i++){
+            for(int j=0; j < studNum; j++){
+                System.out.print("Please Enter the marks of student-"+(j+1)+" from classroom-"+(i+1)+":");
+                
+                marks[i][j] = sc.nextInt();
+            }
+        }
+        
+        //opt of marks of students classroom wise
+        for(int i=0; i < classNums; i++){
+            
+            System.out.print("Recorded Marks of students from classroom-"+(i+1)+"are: ");
+                
+                for(int j=0; j < studNum; j++){
+                    
+                    System.out.print(marks[i][j]);
+                    if(j < studNum-1){
+                        System.out.print(" ");
+                    }
+                }
+                
+                System.out.println();
+        }
+        
+        sc.close();
+    }
+}

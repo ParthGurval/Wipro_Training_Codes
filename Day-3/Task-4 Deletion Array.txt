@@ -1,0 +1,57 @@
+
+
+Task-4: Deleting an element from Array
+
+1. Create a method to delete an element from an array: 
+
+
+import java.util.Arrays;
+
+public class ArrayOperations {
+    
+    public static int accessElement(int arr[], int index){
+        
+        if(index < 0 || index > arr.length){
+            
+            System.out.println("...ArrayIndexOutOfBounds...");
+            return -1;
+        }
+        else{
+            
+            return arr[index];
+        }
+    }
+    
+    public static int[] deleteElement(int[] arr, int index) {
+        
+        if(index < 0 || index > arr.length){
+            
+            System.out.println("...ArrayIndexOutOfBounds...");
+            return arr;
+        }
+        else{
+            
+            int[] newArr = new int[arr.length-1];
+            
+            for(int i=0, j=0; i < arr.length; i++){
+                
+                if(i != index){
+                    newArr[j++] = arr[i];
+                }
+            }
+            
+            return newArr;
+        }
+    }
+    
+    public static void main(String[] args){
+        
+        int[] array = {6, 3, 7, 2, 5, 7};
+        
+        System.out.println(accessElement(array, 4));
+        
+        int[] newArray = deleteElement(array, 3);
+        System.out.println(Arrays.toString(newArray));
+        
+    }
+}

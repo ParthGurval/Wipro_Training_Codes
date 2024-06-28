@@ -1,0 +1,48 @@
+in if else in else we dont have to wrire brackets if its one line code
+
+Conditional statements if,else, else if, switch cases
+
+
+when we know the no of incrementation use foe loop
+while loop used as long as condition gets true 
+in do while loop 
+
+Flowcharts-->
+
+1. Flow line ==> indicates flow of logic by connecting symbols
+2. Terminal (Start/Stop) ==> Represent the start and end of flowchart
+3. input/output => used for input and output operations
+4. Process => used for arthmatic operation and data manupulation
+5. Decision: used for decision making between two or more alternatives 
+
+
+-----------------------------------------------------------------------------
+
+Functions and Modular Design:
+
+funt and methods are used to achieve modularity in our code
+
+
+-----------------------------------------------------------------------------
+
+Pseudocode for method/function:
+
+
+Task 1: Write pseudocode for Insertion Sort.
+ 
+Task2: Write pseudocode for Selection Sort.
+Task3: Write pseudocode for Bubble Sort.
+
+Task => 
+Assignment 1: Pseudocode Development - Task: Write a detailed pseudocode for a simple program that takes a number 
+as input, calculates the square if it's even or the cube if it's odd, and then outputs the result. 
+Incorporate conditional and looping constructs.
+
+Assignment 2: Flowchart Creation - Design a flowchart that outlines the logic for a user login process. 
+It should include conditional paths for successful and unsuccessful login attempts, and a loop that allows a user 
+three attempts before locking the account.
+
+Assignment 3: Function Design and Modularization - Create a document that describes the design of two modular 
+functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number. 
+Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+

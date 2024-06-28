@@ -1,0 +1,75 @@
+Task 1: 
+Write a detailed pseudocode for a simple program that takes a number as input, 
+calculates the square if it's even or the cube if it's odd, and then outputs the result. 
+Incorporate conditional and looping constructs.
+
+
+1. Start
+2. Variable Declaring
+	2.1 Declare num as INT
+	2.2 Declare res as INT
+3. User Inputs 
+	3.1 Taking Inputs
+	3.2 INPUT("Enter any Numbers")
+	3.3 READ IP/Numbers
+4. Lopping to Check number is Even or Odd
+	4.1 IF num MOD 2 IS Equal to 0 THEN
+		4.1.1 INT Res Equal to num * num // Square of Even nums
+	4.2 Else 
+		4.2.1 Num * Num * Num (or Num ^3) //Cuber of other nums
+	END IF
+5. Print the result 
+	5.1	PRINT "The Result:"+res 
+6. END
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2:
+Design a flowchart that outlines the logic for a user login process. It should include 
+conditional paths for successful and unsuccessful login attempts, and a loop that allows a 
+user three attempts before locking the account.
+
+
+On Chrome Tab
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Task 3: 
+Create a document that describes the design of two modular functions: one that returns the factorial of a number, 
+and another that calculates the nth Fibonacci number. Include pseudocode and a brief explanation of how modularity in programming helps with 
+code reuse and organization.
+
+1. Start
+2. Function -> method static int fact(int num)
+3. Using Loops
+	3.1 IF num is equal to 0 THEN 
+		if num == 0 THEN
+		Return 1
+	3.2 else
+		res = 1
+	3.3 For i = 2 to num
+		res = res * i
+	Return res
+4.END funtn
+
+1. Start 
+2. method static int fib(int n)
+3. Using Loops
+	3.1 IF n <= 1 THEN
+		return n
+	3.2 return method fib(n-1) + method fib(n-2)
+	
+	
+Advanategs of Modularity using in code:
+
+1. Modular programming makes our code easier to read because it get separates it into functions which is easy to read and understand code and we can get 
+aspect of the overall functionality.
+
+2. By using modularity a small function with a good, descriptive name can help you understand a block of code without needing a comment.
+
+3. Code becomes easier while testing 
+
+4. Modularity in Java promotes code reusability, enhances maintainability, and facilitates while writing and testing the code
+	

@@ -1,0 +1,57 @@
+Count Palindromic Substrings
+--------------------------
+Problem Statement:
+Given a string s, find the number of palindromic substrings in it. A string is a palindrome if it reads the same backward as forward. A substring is a contiguous sequence of characters within a string.
+ 
+For example, if the string s = "aaa", the palindromic substrings are "a", "a", "a", "aa", "aa", and "aaa", giving a total of 6 palindromic substrings.
+
+
+import java.util.Scanner;
+
+public class substrPalindrom {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter a String: ");
+        String inpStr = sc.nextLine();
+        
+        int finalSubPldm = countSubstrings(inpStr);
+        System.out.println("The total Number of palindrome Substrings are: "+finalSubPldm);
+    }
+    
+    public static int countSubstrings(String str){
+       
+       int length = str.length();
+       int totalCountPdm = 0;
+       
+       for(int i = 0; i < length; i++){
+           
+           totalCountPdm = totalCountPdm + checkCenter(str, i, i);
+           totalCountPdm = totalCountPdm + checkCenter(str, i, i + 1);
+       }
+       
+       return totalCountPdm;
+    }
+    
+    private static int checkCenter(String str, int left, int right){
+        
+        int count = 0;
+        
+        while(left >= 0 && right < str.length()){
+            
+            if(str.charAt(left) == str.charAt(right)){
+                count++;
+                left --;
+                right++;
+            }
+            
+            else{
+                break;
+            }
+        }
+        
+        return count;
+    }
+}

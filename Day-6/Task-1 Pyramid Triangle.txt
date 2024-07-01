@@ -1,0 +1,72 @@
+
+
+
+Print the * pyramid using taking inputer number and reverse it.
+
+n = 5
+ 
+ 
+_ _ _ _ _ *
+_ _ _ _ * * *
+_ _ _ * * * * *
+_ _ * * * * * * *
+_ * * * * * * * * *
+ 
+ 
+_ * * * * * * * * *
+_ _ * * * * * * *
+_ _ _ * * * * *
+_ _ _ _ * * *
+_ _ _ _ _ *
+
+
+Answer: 
+
+import java.util.Scanner;
+
+class displayTriangle {
+    
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Please Enter the rows of traingle: ");
+        int n = sc.nextInt();
+        
+        trianglePyramid triPymd = new trianglePyramid();
+        
+        System.out.println("The Straight Pyramid is as below: ");
+        triPymd.straightTriangle(n);
+        
+        System.out.println("The Reverse Pyramid is as below: ");
+        triPymd.reverseTriangle(n);
+    }
+    
+    public static class trianglePyramid {
+        
+        public void straightTriangle(int n){
+            
+            for(int i = 1; i <= n; i++){
+                
+                String space = " ".repeat(2 * (n - i));
+                System.out.print(space);
+                
+                String star = "* ".repeat(2 * i -1);
+                System.out.println(star);
+            }
+        }
+        
+        public void reverseTriangle(int n){
+            
+            for(int i = n; i >= 1; i--){
+                
+                String space = " ".repeat(2 * (n - i));
+                System.out.print(space);
+                
+                String star = "* ".repeat(2 * i -1);
+                System.out.println(star);
+            }
+        }
+        
+    }
+} 

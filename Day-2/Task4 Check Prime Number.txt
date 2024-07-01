@@ -1,0 +1,54 @@
+Task4:
+
+Write a Java program that reads an integer and prints whether it is a prime number using a for loop and if statements.
+
+Answer =>
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+
+public class CheckPrime{
+ 
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Please Enter an Number");
+        int inpNum = sc.nextInt();
+        
+        int isPrime = 1; //(Here 1 =Prime and 0= not prime)
+        
+        if(inpNum <= 1){
+            isPrime = 0;
+        }
+        else{
+            for(int i=2; i<= inpNum/ 2; i++){
+                
+                if(inpNum % i == 0){
+                    isPrime = 0;
+                    break;
+                }
+            }
+        }
+        
+        if (isPrime == 1){
+            
+            System.out.println("Entered Number:"+inpNum +"is a Prime Number");
+        }
+        else{
+            System.out.println("Entered Number:"+inpNum +"is Not a Prime Number");
+        }
+        
+        sc.close();
+    }   
+}
+
+
+
+====================================================================================================================================================
+
+Modified 
+
+

@@ -26,3 +26,71 @@ INSERT INTO Borrowers (FirstName, LastName, Membership_Date, Email) VALUES
 ('Jerry', 'Smith', '2023-02-20', 'JerrySmith@example.com'); 
 
 INSERT INTO Books (Title, AuthorID, Publish_Year, Genre) VALUES ('War and Peace', 10, 1869, 'Historical Fiction'), ('Gods Of Space', 11, 1866, 'Psychological Fiction'), ('Journey To the West', 12, 1960, 'Southern Gothic'); 
+
+
+Update an Author's BirthDate 
+
+		UPDATE Authors 
+
+SET BirthDate = '1931-07-11' 
+
+WHERE FirstName = ' XYZ ' AND LastName = ' ZYX '; 
+
+ 
+
+	Update a Book's Publish_Year 
+
+UPDATE Books 
+
+SET PublishedYear = 1981 
+
+WHERE Title = ' Journey To the West '; 
+
+ 
+
+Update a Borrower's Email 
+
+UPDATE Borrowers 
+
+SET Email = 'JerrySmith_updated@example.com' 
+
+WHERE FirstName = 'Jerry' AND LastName = 'Smith'; 
+
+
+Delete a Book by Title: 
+
+		DELETE FROM Books 
+
+WHERE Title = 'War and Peace'; 
+
+ 
+
+Delete an Author by LastName 
+
+	DELETE FROM Authors 
+
+WHERE LastName = ' ZYX '; 
+
+
+Title,AuthorID,PublishedYear,Genre 
+
+'Pride and Prejudice',4,1813,'Romantic Fiction' 
+
+'1984',5,1949,'Dystopian' 
+
+'The Great Gatsby',6,1925,'Tragedy' 
+
+
+LOAD DATA INFILE '/path/to/books.csv' 
+
+INTO TABLE Books 
+
+FIELDS TERMINATED BY ',' 
+
+ENCLOSED BY '"' 
+
+LINES TERMINATED BY '\n' 
+
+IGNORE 1 ROWS 
+
+(Title, AuthorID, PublishedYear, Genre); 

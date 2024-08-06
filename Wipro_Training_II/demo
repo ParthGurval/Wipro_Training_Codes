@@ -1,1 +1,26 @@
 
+INSERT INTO Authors (FirstName, LastName, BirthDate) VALUES 
+
+(‘ABC’, ‘CBA’, '1928-09-09'), 
+
+(‘PQR’, ‘RQP’, '1841-18-11'), 
+
+(‘XYZ’,’ ZYX’, '1934-04-28'); 
+
+ 
+
+INSERT INTO Authors (FirstName, LastName, BirthDate) VALUES 
+
+('Leo', ‘Tosly,’ '1868-09-09'), 
+
+('Fyodor', ‘Sky,’ '1941-11-11'), 
+
+('Harley', 'Lee', '1946-04-28'); 
+
+ 
+
+INSERT INTO Borrowers (FirstName, LastName, Membership_Date, Email) VALUES 
+
+('Tommy', 'Rides', '2024-01-15', 'TommyRides@example.com'), 
+
+('Jerry', 'Smith', '2023-02-20', 'JerrySmith@example.com'); 

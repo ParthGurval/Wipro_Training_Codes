@@ -24,3 +24,5 @@ INSERT INTO Borrowers (FirstName, LastName, Membership_Date, Email) VALUES
 ('Tommy', 'Rides', '2024-01-15', 'TommyRides@example.com'), 
 
 ('Jerry', 'Smith', '2023-02-20', 'JerrySmith@example.com'); 
+
+INSERT INTO Books (Title, AuthorID, Publish_Year, Genre) VALUES ('War and Peace', 10, 1869, 'Historical Fiction'), ('Gods Of Space', 11, 1866, 'Psychological Fiction'), ('Journey To the West', 12, 1960, 'Southern Gothic'); 

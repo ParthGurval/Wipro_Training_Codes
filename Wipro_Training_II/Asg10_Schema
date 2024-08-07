@@ -1,0 +1,75 @@
+
+SELECT * FROM Customers;
++------------+----------------+------------------+-----------+---------+-----------+
+| CustomerID | Customer_Name  | Address          | City      | Pincode | Country   |
++------------+----------------+------------------+-----------+---------+-----------+
+|          1 | Mukesh Ambani  | 123 South Mumbai | Mumbai    |   42567 | India     |
+|          2 | Steve Smith    | 456 Oak St       | Perth     |   68508 | Australia |
+|          3 | Gautam Adani   | 789 Pine St      | Surat     |   44247 | India     |
+|          4 | Sundar Pichai  | 101 Maple St     | Toronto   |   62563 | Canada    |
+|          5 | Lewis Hamilton | 202 Birch St     | Stevenage |   41505 | UK        |
+|          6 | David Green    | 303 Cedar St     | Peoria    |   61602 | USA       |
+|          7 | M. S. Dhoni    | 589 Chiron St    | Pune      |   60201 | India     |
+|          8 | Eva Black      | 404 Willow St    | Evanston  |   60201 | USA       |
+|          9 | Ana de armos   | 567 Reonal St    | Moscow    |   60201 | Russia    |
+|         10 | Parth Gurval   | 634 highClub St  | Kolhapur  |  415018 | India     |
+|         11 | Tom Cruise     | 414 Bycyle St    | New York  |   60225 | USA       |
++------------+----------------+------------------+-----------+---------+-----------+
+
+SELECT * FROM Departments;
++--------------+-----------------+
+| DepartmentID | Department_Name |
++--------------+-----------------+
+|            1 | Sales           |
+|            2 | Marketing       |
+|            3 | HR              |
+|            4 | IT              |
++--------------+-----------------+
+
+SELECT * FROM Employees;
++------------+-----------+-----------+------------------------------+---------+--------------+--------+
+| EmployeeID | Emp_fName | Emp_lName | Email                        | City    | DepartmentID | Salary |
++------------+-----------+-----------+------------------------------+---------+--------------+--------+
+|          1 | Michael   | Smith     | michael.smith@example.com    | Chicago |            1 |  60000 |
+|          2 | Linda     | Jones     | linda.jones@example.com      | Sydney  |            2 |  65000 |
+|          3 | Amit      | abhishek  | amit.abhishek@example.com    | Mumbai  |            3 |  70000 |
+|          4 | Elena     | Ivanova   | elena.ivanova@example.com    | Moscow  |            1 |  55000 |
+|          5 | Jin       | Kim       | jin.kim@example.com          | Seoul   |            2 |  62000 |
+|          6 | Haruki    | Murakami  | haruki.murakami@example.com  | Tokyo   |            3 |  67000 |
+|          7 | William   | Wilson    | william.wilson@example.com   | Chicago |            4 |  71000 |
+|          8 | Priyanka  | Chopra    | priyanka.chopra@example.com  | Delhi   |            4 |  63000 |
+|          9 | Sachin    | Tendulkar | sachin.tendulkar@example.com | Mumbai  |            1 |  59000 |
++------------+-----------+-----------+------------------------------+---------+--------------+--------+
+
+
+SELECT * FROM Orders;
++---------+------------+------------+------------+------------+
+| OrderID | CustomerID | EmployeeID | OrderDate  | ShippingID |
++---------+------------+------------+------------+------------+
+|       1 |          1 |          1 | 2024-01-15 |          1 |
+|       2 |          2 |          2 | 2024-02-20 |          2 |
+|       3 |          3 |          3 | 2024-03-10 |          3 |
+|       4 |          4 |          4 | 2024-04-05 |          4 |
+|       5 |          5 |          5 | 2024-05-18 |          5 |
+|       6 |          6 |          6 | 2024-06-22 |          6 |
+|       7 |          7 |          7 | 2024-07-30 |          7 |
+|       8 |          1 |          8 | 2024-08-15 |          8 |
+|       9 |          2 |          9 | 2024-09-10 |          9 |
+|      10 |          3 |          1 | 2024-10-25 |         10 |
++---------+------------+------------+------------+------------+
+
+SELECT * FROM Orders;
++---------+------------+------------+------------+------------+
+| OrderID | CustomerID | EmployeeID | OrderDate  | ShippingID |
++---------+------------+------------+------------+------------+
+|       1 |          1 |          1 | 2024-01-15 |          1 |
+|       2 |          2 |          2 | 2024-02-20 |          2 |
+|       3 |          3 |          3 | 2024-03-10 |          3 |
+|       4 |          4 |          4 | 2024-04-05 |          4 |
+|       5 |          5 |          5 | 2024-05-18 |          5 |
+|       6 |          6 |          6 | 2024-06-22 |          6 |
+|       7 |          7 |          7 | 2024-07-30 |          7 |
+|       8 |          1 |          8 | 2024-08-15 |          8 |
+|       9 |          2 |          9 | 2024-09-10 |          9 |
+|      10 |          3 |          1 | 2024-10-25 |         10 |
++---------+------------+------------+------------+------------+

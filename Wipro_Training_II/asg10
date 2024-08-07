@@ -12,3 +12,16 @@ INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate, ShippingID) VALU
 INSERT INTO Shipments (ShippingID, OrderID, ShippingDate, Shipping_Status) VALUES (1, 1, '2024-01-16', 'Delivered'), (2, 2, '2024-02-21', 'Shipped'), (3, 3, '2024-03-11', 'Delivered'), (4, 4, '2024-04-06', 'In Transit'), (5, 5, '2024-05-19', 'Delivered'), (6, 6, '2024-06-23', 'Shipped'), (7, 7, '2024-07-31', 'In Transit'), (8, 8, '2024-08-16', 'Delivered'), (9, 9, '2024-09-11', 'Shipped'), (10, 10, '2024-10-26', 'Delivered'), (11, 1, '2024-01-17', 'Delivered'), (12, 2, '2024-02-22', 'Shipped'), (13, 3, '2024-03-12', 'Delivered');
 
 
+ALTER TABLE Orders ADD OrderValue DECIMAL(10, 2);
+
+
+UPDATE Orders SET OrderValue = 1000 WHERE OrderID = 1;
+UPDATE Orders SET OrderValue = 1500 WHERE OrderID = 2;
+UPDATE Orders SET OrderValue = 1200 WHERE OrderID = 3;
+UPDATE Orders SET OrderValue = 1700 WHERE OrderID = 4;
+UPDATE Orders SET OrderValue = 1100 WHERE OrderID = 5;
+UPDATE Orders SET OrderValue = 1400 WHERE OrderID = 6;
+UPDATE Orders SET OrderValue = 1600 WHERE OrderID = 7;
+UPDATE Orders SET OrderValue = 1300 WHERE OrderID = 8;
+UPDATE Orders SET OrderValue = 1250 WHERE OrderID = 9;
+UPDATE Orders SET OrderValue = 1350 WHERE OrderID = 10;

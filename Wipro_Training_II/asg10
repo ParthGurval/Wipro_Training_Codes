@@ -29,3 +29,6 @@ UPDATE Orders SET OrderValue = 1350 WHERE OrderID = 10;
 SELECT CustomerID, Customer_Name FROM Customers WHERE CustomerID IN (SELECT CustomerID FROM Orders WHERE OrderValue > (SELECT AVG(OrderValue) FROM Orders));
 
 SELECT CustomerID, Customer_Name, City FROM Customers WHERE City = 'Mumbai' UNION SELECT CustomerID, Customer_Name, City FROM Customers WHERE City = 'New York';
+
+SELECT c.CustomerID, c.Customer_Name, o.OrderValue FROM Customers C JOIN Orders o ON c.CustomerID=o.CustomerID WHERE o.OrderValue > (SELECT AVG(OrderValue) FROM Orders);
+ERROR 1054 (42S22): Unknown column 'c.CustomerID' in 'field list'
